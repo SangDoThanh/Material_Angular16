@@ -1,0 +1,25 @@
+<div> AutoComplete</div>
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+        <mat-label>Number</mat-label>
+        <input type="text" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl"[matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                {{option}}
+            </mat-option>
+        </mat-autocomplete>
+    </mat-form-field>
+</form>
+
+<div>Setting separate control and display values</div>
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+        <mat-label>Assignee</mat-label>
+        <input type="text" matInput [formControl]="myControlDisplay" [matAutocomplete]="autoDisplay">
+        <mat-autocomplete #autoDisplay="matAutocomplete" [displayWith]="displayFn">
+            <mat-option *ngFor="let optionDisplay of filteredOptionsDisplay | async" [value]="optionDisplay">
+                {{optionDisplay.name}}
+            </mat-option>
+        </mat-autocomplete>
+    </mat-form-field>
+</form>
