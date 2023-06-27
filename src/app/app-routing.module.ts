@@ -10,6 +10,8 @@ import { ProgressSpinnerComponent } from './progress-spinner/progress-spinner.co
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { MenuComponent } from './menu/menu.component';
 import { ListComponent } from './list/list.component';
+import { GirdlistComponent } from './girdlist/girdlist.component';
+import { ExpansionPanelComponent } from './expansion-panel/expansion-panel.component';
 
 const routes: Routes = [
   { path: 'autocomplete', component: AutocompleteComponent },
@@ -22,6 +24,9 @@ const routes: Routes = [
   { path: 'sidenav', component: SidenavComponent },
   { path: 'menu', component: MenuComponent },
   { path: 'list', component: ListComponent },
+  { path: 'grid-list', component: GirdlistComponent },
+  { path: 'expansion', component: ExpansionPanelComponent },
+
 ];
 
 @NgModule({

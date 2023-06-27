@@ -4,3 +4,44 @@
     <mat-list-item role="listitem">Item 3</mat-list-item>
   </mat-list>
   
+
+  <mat-list>
+    <div mat-subheader>Folders</div>
+    <mat-list-item *ngFor="let folder of folders">
+      <mat-icon matListItemIcon>folder</mat-icon>
+      <div matListItemTitle>{{folder.name}}</div>
+      <div matListItemLine>{{folder.updated | date}}</div>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <div mat-subheader>Notes</div>
+    <mat-list-item *ngFor="let note of notes">
+      <mat-icon matListItemIcon>note</mat-icon>
+      <div matListItemTitle>{{note.name}}</div>
+      <div matListItemLine>{{note.updated | date}}</div>
+    </mat-list-item>
+  </mat-list>
+  
+
+  <br>
+  List with selection
+  <mat-divider></mat-divider>
+  <mat-selection-list #shoes>
+    <mat-list-option *ngFor="let shoe of typesOfShoes">
+      {{shoe}}
+    </mat-list-option>
+  </mat-selection-list>
+  
+  <p>
+    Options selected: {{shoes.selectedOptions.selected.length}}
+  </p>
+  
+  List with single selectedOptions
+  <mat-selection-list #shoes1 [multiple]="false">
+    <mat-list-option *ngFor="let shoe1 of typesOfShoes" [value]="shoe1">
+      {{shoe1}}
+    </mat-list-option>
+  </mat-selection-list>
+  
+  <p>
+    Option selected: {{shoes1.selectedOptions.hasValue() ? shoes1.selectedOptions.selected[0].value : 'None'}}
+  </p>

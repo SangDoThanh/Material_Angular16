@@ -21,14 +21,14 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatMenuModule } from '@angular/material/menu';
-import { ListComponent } from './list/list.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @NgModule({
     declarations: [
         AppComponent,
         TablepopupComponent,
-        TableeditpopupComponent,
-        ListComponent
+        TableeditpopupComponent
     ],
     providers: [],
     bootstrap: [AppComponent],
@@ -52,7 +52,10 @@ import { ListComponent } from './list/list.component';
         MatButtonToggleModule,
         MatProgressSpinnerModule,
         MatSidenavModule,
-        MatMenuModule
+        MatMenuModule,
+        MatListModule,
+        MatGridListModule,
+        MatExpansionModule
     ]
 })
 export class AppModule { }
