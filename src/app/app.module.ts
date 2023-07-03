@@ -23,12 +23,13 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
     declarations: [
         AppComponent,
         TablepopupComponent,
-        TableeditpopupComponent
+        TableeditpopupComponent,
     ],
     providers: [],
     bootstrap: [AppComponent],
@@ -55,7 +56,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
         MatMenuModule,
         MatListModule,
         MatGridListModule,
-        MatExpansionModule
+        MatExpansionModule,
+        MatCardModule
     ]
 })
 export class AppModule { }
