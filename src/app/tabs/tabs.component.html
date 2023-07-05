@@ -5,6 +5,9 @@ Basic use of the tab group
   <mat-tab label="Third"> Content 3 </mat-tab>
 </mat-tab-group>
 
+<br>
+<br>
+
 Tab group with asynchronously loading tab contents
 <ng-container *ngIf="(asyncTabs | async) === null">
   Loading tabs...
@@ -17,6 +20,8 @@ Tab group with asynchronously loading tab contents
   </mat-tab>
 </mat-tab-group>
 
+<br>
+<br>
 
 Using tabs with a custom label template
 <mat-tab-group>
@@ -43,5 +48,37 @@ Using tabs with a custom label template
     </ng-template>
 
     Content 3
+  </mat-tab>
+</mat-tab-group>
+
+<br>
+<br>
+
+Tab group with dynamically changing tabs
+<mat-form-field>
+  <mat-label>Selected tab index</mat-label>
+  <input matInput type="number" [formControl]="selected">
+</mat-form-field>
+
+<div>
+  <button mat-raised-button
+          class="example-add-tab-button"
+          (click)="addTab(selectAfterAdding.checked)">
+    Add new tab
+  </button>
+  <mat-checkbox #selectAfterAdding> Select tab after adding </mat-checkbox>
+</div>
+
+<mat-tab-group [selectedIndex]="selected.value"
+               (selectedIndexChange)="selected.setValue($event)">
+  <mat-tab *ngFor="let tab of tabs; let index = index" [label]="tab">
+    Contents for {{tab}} tab
+
+    <button mat-raised-button
+            class="example-delete-tab-button"
+            [disabled]="tabs.length === 1"
+            (click)="removeTab(index)">
+      Delete Tab
+    </button>
   </mat-tab>
 </mat-tab-group>
