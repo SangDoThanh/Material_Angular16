@@ -24,12 +24,13 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
     declarations: [
         AppComponent,
         TablepopupComponent,
-        TableeditpopupComponent
+        TableeditpopupComponent,
     ],
     providers: [],
     bootstrap: [AppComponent],
@@ -57,7 +58,8 @@ import { MatTabsModule } from '@angular/material/tabs';
         MatListModule,
         MatGridListModule,
         MatExpansionModule,
-        MatTabsModule
+        MatTabsModule,
+        MatCardModule
     ]
 })
 export class AppModule { }

@@ -12,7 +12,11 @@ import { MenuComponent } from './menu/menu.component';
 import { ListComponent } from './list/list.component';
 import { GirdlistComponent } from './girdlist/girdlist.component';
 import { ExpansionPanelComponent } from './expansion-panel/expansion-panel.component';
+<<<<<<< HEAD
 import { TabsComponent } from './tabs/tabs.component';
+=======
+import { CardComponent } from './card/card.component';
+>>>>>>> home_dev
 
 const routes: Routes = [
   { path: 'autocomplete', component: AutocompleteComponent },
@@ -27,7 +31,11 @@ const routes: Routes = [
   { path: 'list', component: ListComponent },
   { path: 'grid-list', component: GirdlistComponent },
   { path: 'expansion', component: ExpansionPanelComponent },
+<<<<<<< HEAD
   { path: 'tabs', component: TabsComponent },
+=======
+  { path: 'card', component: CardComponent },
+>>>>>>> home_dev
 ];
 
 @NgModule({
