@@ -25,6 +25,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { NgFor } from '@angular/common';
 
 @NgModule({
     declarations: [
@@ -59,7 +61,10 @@ import { MatCardModule } from '@angular/material/card';
         MatGridListModule,
         MatExpansionModule,
         MatTabsModule,
-        MatCardModule
+        MatCardModule,
+        MatPaginatorModule,
+        MatTabsModule,
+        MatFormFieldModule,
     ]
 })
 export class AppModule { }

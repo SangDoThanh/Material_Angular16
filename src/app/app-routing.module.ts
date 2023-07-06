@@ -14,7 +14,7 @@ import { GirdlistComponent } from './girdlist/girdlist.component';
 import { ExpansionPanelComponent } from './expansion-panel/expansion-panel.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { CardComponent } from './card/card.component';
-
+import { TableComponent } from './table/table.component';
 
 const routes: Routes = [
   { path: 'autocomplete', component: AutocompleteComponent },
@@ -30,7 +30,8 @@ const routes: Routes = [
   { path: 'grid-list', component: GirdlistComponent },
   { path: 'expansion', component: ExpansionPanelComponent },
   { path: 'tabs', component: TabsComponent },
-  { path: 'card', component: CardComponent }
+  { path: 'card', component: CardComponent },
+  { path: 'table', component: TableComponent },
 ];
 
 @NgModule({
