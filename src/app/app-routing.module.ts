@@ -15,6 +15,7 @@ import { ExpansionPanelComponent } from './expansion-panel/expansion-panel.compo
 import { TabsComponent } from './tabs/tabs.component';
 import { CardComponent } from './card/card.component';
 import { TableComponent } from './table/table.component';
+import { InputComponent } from './input/input.component';
 
 const routes: Routes = [
   { path: 'autocomplete', component: AutocompleteComponent },
@@ -32,6 +33,7 @@ const routes: Routes = [
   { path: 'tabs', component: TabsComponent },
   { path: 'card', component: CardComponent },
   { path: 'table', component: TableComponent },
+  { path: 'input', component: InputComponent },
 ];
 
 @NgModule({

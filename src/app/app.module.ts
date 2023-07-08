@@ -26,7 +26,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { NgFor } from '@angular/common';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
     declarations: [
@@ -65,6 +65,7 @@ import { NgFor } from '@angular/common';
         MatPaginatorModule,
         MatTabsModule,
         MatFormFieldModule,
+        MatInputModule
     ]
 })
 export class AppModule { }
